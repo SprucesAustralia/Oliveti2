@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Oliveti - Commercial Cleaning Checklist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    /* Approximate brand colors from the Oliveti example */
+    :root {
+      --bg-color: #e8c2b3;    /* Pinkish background */
+      --text-color: #5f1d1d;  /* Dark brown/maroon */
+      --accent-color: #5f1d1d;/* Same as text or a variant if desired */
+      --heading-font: "Georgia", serif;
+      --body-font: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--body-font);
+      line-height: 1.5;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-family: var(--heading-font);
+      font-size: 36px;
+      color: var(--text-color);
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .tagline p {
+      margin-bottom: 8px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    h2 {
+      font-family: var(--heading-font);
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: var(--text-color);
+      text-align: center;
+    }
+
+    /* Explanation or note about visits */
+    .visit-info {
+      text-align: center;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    /* The form with the checklist */
+    form {
+      background-color: #fff3f0;  /* slightly lighter pink for contrast */
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    .area-section {
+      margin-bottom: 30px;
+    }
+
+    .area-section h3 {
+      font-size: 20px;
+      font-family: var(--heading-font);
+      margin-bottom: 15px;
+      color: var(--text-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+    }
+
+    th, td {
+      border: 1px solid #d3c0bb;
+      vertical-align: top;
+      padding: 10px;
+    }
+
+    th {
+      background-color: var(--text-color);
+      color: #fff;
+      font-weight: 400;
+      text-align: center;
+      font-family: var(--heading-font);
+      font-size: 16px;
+    }
+
+    .task-col {
+      width: 200px; 
+      font-weight: bold;
+      color: var(--text-color);
+    }
+
+    .checklist-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .checklist-cell label {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+    .checklist-cell input[type="checkbox"] {
+      transform: scale(1.1);
+    }
+    .checklist-cell input[type="file"] {
+      font-size: 12px;
+    }
+    .checklist-cell textarea {
+      width: 100%;
+      min-height: 40px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      padding: 4px;
+      resize: vertical;
+      color: #333;
+    }
+
+    .submit-btn {
+      display: block;
+      margin: 30px auto 0;
+      background-color: var(--text-color);
+      color: #ffffff;
+      border: none;
+      padding: 14px 36px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #3c0f0f; /* Slightly darker variant */
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background-color: #5f1d1d; /* Dark maroon for the footer? */
+      color: #ffffff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      th, td {
+        font-size: 14px;
+      }
+      .task-col {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>OLIVETI</h1>
+</header>
+
+<div class="tagline">
+  <p>
+    ✓ AI-powered custom cleaning checklist (matched to your brand)  
+    ✓ Mobile-friendly system for your cleaning team  
+    ✓ Photo verification capabilities  
+    ✓ Automated weekly performance reports  
+    ✓ Quality tracking analytics  
+  </p>
+  <p>
+    Already helping 100+ facilities save 5+ hours weekly on cleaning management.  
+    Also: ✓ Cost-saving cleaning frequencies  
+    ✓ Combining my 10 years of cleaning expertise with AI innovation to transform your cleaning standards.  
+    Drop a 👋 or your business name … or DM me  
+    Want to transform your facility’s cleaning standards in 2 minutes? What are you waiting for?
+  </p>
+</div>
+
+<div class="container">
+  <h2>Commercial Cleaning Checklist</h2>
+  <div class="visit-info">
+    <strong>Visits:</strong> Standard vs. Deep Clean  
+    <em>Tick tasks, attach photos, leave comments, then submit!</em>
+  </div>
+
+  <!-- Using GET so it just navigates to subscribe.html on submission, ignoring data -->
+  <form action="subscribe.html" method="GET">
+    <!-- Example: Offices Section -->
+    <div class="area-section">
+      <h3>Offices</h3>
+      <table>
+        <thead>
+          <tr>
+            <th class="task-col">Task</th>
+            <th>Standard</th>
+            <th>Deep</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Empty bins & replace liners</td>
+            <td>
+              <div class="checklist-cell">
+                <label><input type="checkbox" name="offices_bins_std"> Done</label>
+                <input type="file" name="offices_bins_std_photo" accept="image/*">
+                <textarea name="offices_bins_std_comment" placeholder="Comments"></textarea>
+              </div>
+            </td>
+            <td>
+              <div class="checklist-cell">
+                <label><input type="checkbox" name="offices_bins_deep"> Done</label>
+                <input type="file" name="offices_bins_deep_photo" accept="image/*">
+                <textarea name="offices_bins_deep_comment" placeholder="Comments"></textarea>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Vacuum & spot clean floors</td>
+            <td>
+              <div class="checklist-cell">
+                <label><input type="checkbox" name="offices_vac_std"> Done</label>
+                <input type="file" name="offices_vac_std_photo" accept="image/*">
+                <textarea name="offices_vac_std_comment" placeholder="Comments"></textarea>
+              </div>
+            </td>
+            <td>
+              <div class="checklist-cell">
+                <label><input type="checkbox" name="offices_vac_deep"> Done</label>
+                <input type="file" name="offices_vac_deep_photo" accept="image/*">
+                <textarea name="offices_vac_deep_comment" placeholder="Comments"></textarea>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Dust desks & chairs</td>
+            <td>
+              <div class="checklist-cell">
+                <label><input type="checkbox" name="offices_dust_std"> Done</label>
+                <input type="file" name="offices_dust_std_photo" accept="image/*">
+                <textarea name="offices_dust_std_comment" placeholder="Comments"></textarea>
+              </div>
+            </td>
+            <td>
+              <div class="checklist-cell">
+                <label><input type="checkbox" name="offices_dust_deep"> Done</label>
+                <input type="file" name="offices_dust_deep_photo" accept="image/*">
+                <textarea name="offices_dust_deep_comment" placeholder="Comments"></textarea>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Example: Another area e.g. Kitchen, Bathrooms, etc. ... replicate as needed -->
+
+    <button type="submit" class="submit-btn">Submit Checklist</button>
+  </form>
+</div>
+
+<footer>
+  <p>© 2024 Oliveti - Commercial Cleaning Checklist</p>
+</footer>
+
+</body>
+</html>
